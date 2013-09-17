@@ -17,6 +17,7 @@ FIND_LIBRARY(DL_LIBRARY_PATH
 		dl
 	PATHS
 		${TOOLCHAIN_LIBRARY_PATH}
+		/usr/lib/arm-linux-gnueabihf
 		/lib64
 		/usr/lib64
 		/usr/local/lib64

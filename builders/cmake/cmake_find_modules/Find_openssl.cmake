@@ -20,6 +20,8 @@ FIND_LIBRARY(OPENSSL_LIBRARY_PATH
 		ssl
 	PATHS
 		${TOOLCHAIN_LIBRARY_PATH}
+		/usr/lib/arm-linux-gnueabihf
+		/lib/arm-linux-gnueabihf
 		/opt/local/lib64
 		/opt/local/lib
 		/sw/lib64
@@ -43,6 +45,8 @@ FIND_LIBRARY(CRYPTO_LIBRARY_PATH
 		crypto
 	PATHS
 		${TOOLCHAIN_LIBRARY_PATH}
+		/usr/lib/arm-linux-gnueabihf
+		/lib/arm-linux-gnueabihf
 		/opt/local/lib64
 		/opt/local/lib
 		/sw/lib64
@@ -80,6 +84,8 @@ IF($ENV{COMPILE_STATIC} MATCHES "1")
 			/lib/i386-linux-gnu
 			/usr/lib/i386-linux-gnu
 			/usr/local/ssl/lib
+			/usr/lib/arm-linux-gnueabihf
+			/lib/arm-linux-gnueabihf
 			NO_DEFAULT_PATH)
 	SET(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES_OLD})
 ELSEIF($ENV{COMPILE_STATIC} MATCHES "1")

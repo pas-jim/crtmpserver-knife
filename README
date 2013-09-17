@@ -93,3 +93,38 @@ Credits:
 * lua: Roberto Ierusalimschy, Waldemar Celes, Luiz Henrique de Figueiredo
 * Performance: Vlad Galu
 * Protocols: Mircea Danila Dumitrescu
+
+--- Added by Jim ---
+
+My specific instructions... to compile on the glasses...
+
+cd builders/cmake
+cmake .
+cmake -DCMAKE_BUILD_TYPE=Release -DCRTMPSERVER_INSTALL_PREFIX=/opt/crtmpd
+make
+make install
+cp -r xoeye/etc /opt/crtmpd/
+/opt/crtmpd/sbin/crtmpserver --use-implicit-console-appender /opt/crtmpd/etc/crtmpserver.jim.lua &
+
+outgoing stream will be created and named 'ts0'
+
+
+---  example gst-launch-0.10 command ---
+
+#!/bin/bash
+# startleftcam-sample.sh
+cmd3=( gst-launch-0.10 -v
+        videotestsrc !
+#       v4l2src device=/dev/video0 !
+        "video/x-raw-yuv, width=640, height=480, framerate=30/1, format=(fourcc)UYVY" !
+        queue ! ffmpegcolorspace !
+        queue ! ducatih264enc profile=baseline level=level-31 bitrate=2000 !
+        queue ! h264parse !
+        queue ! mpegtsmux !
+        tcpclientsink
+        port=9999
+)
+time "${cmd3[@]}"
+EOF
+
+--- end of example ---

@@ -103,6 +103,7 @@ cmake .
 cmake -DCMAKE_BUILD_TYPE=Release -DCRTMPSERVER_INSTALL_PREFIX=/opt/crtmpd
 make
 make install
+cd ../..
 cp -r xoeye/etc /opt/crtmpd/
 /opt/crtmpd/sbin/crtmpserver --use-implicit-console-appender /opt/crtmpd/etc/crtmpserver.jim.lua &
 

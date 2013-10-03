@@ -20,7 +20,7 @@ logAppenders=
                 type="file",
                 level=6,
                 -- the file where the log messages are going to land
-                fileName="/var/log/crtmpserver/main.log"
+                fileName="/var/log/crtmpserver_main.log"
         }
 }
 

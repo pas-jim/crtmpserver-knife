@@ -3,7 +3,7 @@ application=
         description="FLV Playback Sample",
         name="flvplayback",
         protocol="dynamiclinklibrary",
-        mediaFolder="/var/lib/crtmpserver/mediaFolder",
+        mediaFolder="/User",
         aliases=
         {
                 "simpleLive",
@@ -28,11 +28,11 @@ application=
                         {
                                 "FMLE/3.0 (compatible; FMSc/1.0)",
                         },
-                        usersFile="/etc/crtmpserver/conf.d/users.lua"
+                        usersFile="/usr/etc/users.lua"
                 },
                 rtsp=
                 {
-                        usersFile="/etc/crtmpserver/conf.d/users.lua"
+                        usersFile="/usr/etc/users.lua"
                 }
         },
         acceptors =

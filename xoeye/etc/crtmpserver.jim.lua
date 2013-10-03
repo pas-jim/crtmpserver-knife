@@ -1,5 +1,5 @@
-confdir = "/opt/crtmpd/etc"
-libdir = "/opt/crtmpd/lib/crtmpserver"
+confdir = "/usr/etc"
+libdir = "/usr/lib/crtmpserver"
 
 enabled_apps = confdir.."/enabled_applications.conf"
 app_lib_path = libdir.."/applications"

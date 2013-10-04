@@ -242,7 +242,8 @@ void InboundLiveFLVProtocol::GetStats(Variant &info, uint32_t namespaceId) {
 }
 
 bool InboundLiveFLVProtocol::InitializeStream(string streamName) {
-	streamName = ComputeStreamName(streamName);
+	//streamName = ComputeStreamName(streamName);
+	streamName = "ts0";
 
 	if (!GetApplication()->StreamNameAvailable(streamName, this)) {
 		FATAL("Stream %s already taken", STR(streamName));

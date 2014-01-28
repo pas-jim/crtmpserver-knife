@@ -100,7 +100,7 @@ My specific instructions... to compile on the glasses...
 
 cd builders/cmake
 cmake .
-cmake -DCMAKE_BUILD_TYPE=Release -DCRTMPSERVER_INSTALL_PREFIX=/opt/crtmpd
+COMPILE_STATIC=1 cmake -DCMAKE_BUILD_TYPE=Release -DCRTMPSERVER_INSTALL_PREFIX=/opt/crtmpd
 make
 make install
 cd ../..

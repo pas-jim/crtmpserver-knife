@@ -154,3 +154,5 @@ time "${cmd3[@]}"
 EOF
 
 --- end of example ---
+
+The RTSP->RTMP conversion has motion artifacts...

@@ -155,4 +155,4 @@ EOF
 
 --- end of example ---
 
-The RTSP->RTMP conversion has motion artifacts...
+The RTSP->RTMP conversion has motion artifacts.
